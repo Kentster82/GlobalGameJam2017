@@ -13,7 +13,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Joystick1Button5))
         {
             direction = transform.Find("Front").position - transform.position;
             direction = force *direction.normalized;
@@ -21,7 +21,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
             GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Right").position);
 
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.Joystick1Button10))
         {
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
@@ -30,7 +30,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
 
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Joystick1Button4))
         {
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
@@ -38,7 +38,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
             GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Left").position);
 
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.Joystick1Button8))
         {
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
