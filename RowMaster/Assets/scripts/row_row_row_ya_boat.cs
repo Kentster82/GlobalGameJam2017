@@ -9,6 +9,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
     bool OldTriggerStateR , OldTriggerStateL;
     public string JoyNum;
     KeyCode RB, LB;
+    Vector3 Bouyant = new Vector3(0, 9.81f, 0);
     // Use this for initialization
     void Start () {
         OldTriggerStateR =false;
@@ -43,6 +44,12 @@ public class row_row_row_ya_boat : MonoBehaviour {
        
         bool NewTriggerStateR = Input.GetAxis(JoyNum + "AxisRight") > 0f;
         bool NewTriggerStateL = Input.GetAxis(JoyNum + "AxisLeft") > 0f;
+
+        if(transform.position.y <= 0)
+        {
+            
+            GetComponent<Rigidbody>().AddForceAtPosition(Bouyant * -(transform.position.y- GetComponent<Rigidbody>().mass),transform.position);
+        }
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(RB))
         {
            direction = transform.Find("Front").position - transform.position;
