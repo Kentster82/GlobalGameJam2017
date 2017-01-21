@@ -5,6 +5,8 @@ using UnityEngine;
 public class row_row_row_ya_boat : MonoBehaviour {
     Vector3 direction;
     public int force = 5;
+	public bool flagged = false;
+
     // Use this for initialization
     void Start () {
 		
@@ -47,7 +49,41 @@ public class row_row_row_ya_boat : MonoBehaviour {
 
         }
     }
+
     void Update () {
       
 	}
+
+	void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.tag == "flag")
+		{
+			flagged = true;
+			Destroy(collision.gameObject);
+		}
+
+		if (collision.gameObject.tag == "player")
+		{
+			if (flagged)
+				flagged = false;
+			if (!flagged)
+			{
+				if (collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged)
+				{
+					flagged = true;
+					// Generate wave
+				}
+			}
+		}
+		if (collision.gameObject.tag == "wave")
+		{
+			if (flagged)
+			{
+				flagged = false;
+				// Spawn Flag
+			}
+		}
+			
+	}
+
 }
