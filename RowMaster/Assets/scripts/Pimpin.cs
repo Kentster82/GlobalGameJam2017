@@ -16,6 +16,7 @@ public class Pimpin : MonoBehaviour {
     public string PlaySceneName;        //name of game "play" scene
 
     public Font f;
+    public Texture logo;
 
 
     //Four player scores
@@ -42,7 +43,7 @@ public class Pimpin : MonoBehaviour {
         {
             GUI.skin.button.fontSize = 60;
             GUI.contentColor = Color.white;
-            if (GUI.Button(new Rect(Screen.width / 2 - Screen.width / 8, 3*Screen.height / 4, Screen.width / 4, Screen.height / 7), "Play"))
+            if (GUI.Button(new Rect(0 + Screen.width / 4, Screen.width / 25, Screen.width - 2* Screen.width / 4, 6* Screen.height / 7), logo))
             {
                 gamePhase = GAME_SELECT;
             }
