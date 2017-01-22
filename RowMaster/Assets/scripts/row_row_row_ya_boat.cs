@@ -21,7 +21,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
     // Use this for initialization
     void Start () {
         OldTriggerStateR =false;
-        GameObject.Find("Cheers").GetComponent<AudioSource>().Pause();
+       // GameObject.Find("Cheers").GetComponent<AudioSource>().Pause();
         switch (JoyNum)
         {
             case "Joystick1":
@@ -75,7 +75,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
 			rightAnimator.SetTrigger ("Forward");
            direction = transform.Find("Front").position - transform.position;
            direction = force *direction.normalized;
-           //Debug.Log(direction);
+           Debug.Log("RB");
            GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Right").position);
 
         }
@@ -94,7 +94,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
 			leftAnimator.SetTrigger ("Forward");
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
-            //Debug.Log(direction);
+            Debug.Log("LB");
             GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Left").position);
 
         }
