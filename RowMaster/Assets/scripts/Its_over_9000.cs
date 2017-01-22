@@ -12,11 +12,18 @@ public class Its_over_9000 : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        time++;
+        
         if(time == 0)
         {
             start = GetComponent<Rigidbody>().rotation;
+            Debug.Log(start);
         }
+        time++;
+        if (time >= 200)
+        {
+            time = 0;
+        }
+        
     }
     // Update is called once per frame
     void Update () {
