@@ -115,6 +115,14 @@ public class row_row_row_ya_boat : MonoBehaviour {
 		{
 			time += Time.deltaTime;
 			score = (int)time;
+			if (this.gameObject.name == "Raft1")
+				GameObject.Find("GamePimp").GetComponent<Pimpin>().Raft1Score = score;
+			if (this.gameObject.name == "Raft2")
+				GameObject.Find("GamePimp").GetComponent<Pimpin>().Raft2Score = score;
+			if (this.gameObject.name == "Raft3")
+				GameObject.Find("GamePimp").GetComponent<Pimpin>().Raft3Score = score;
+			if (this.gameObject.name == "Raft4")
+				GameObject.Find("GamePimp").GetComponent<Pimpin>().Raft4Score = score;
 		}
 	}
 

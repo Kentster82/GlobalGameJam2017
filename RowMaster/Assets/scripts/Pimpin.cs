@@ -32,16 +32,6 @@ public class Pimpin : MonoBehaviour {
         DontDestroyOnLoad(transform.gameObject);        //make this object persist across scenes
         gamePhase = TITLE;
 	}
-	
-
-    //called when the Game Play scene loads
-    void InitializePlay()
-    {
-        Raft1Score = GameObject.Find("Raft1").GetComponent<row_row_row_ya_boat>().score;
-        Raft2Score = GameObject.Find("Raft2").GetComponent<row_row_row_ya_boat>().score;
-        Raft3Score = GameObject.Find("Raft3").GetComponent<row_row_row_ya_boat>().score;
-        Raft4Score = GameObject.Find("Raft4").GetComponent<row_row_row_ya_boat>().score;
-    }
 
     //Called every frame
     void OnGUI()
@@ -68,7 +58,6 @@ public class Pimpin : MonoBehaviour {
             {
                 SceneManager.LoadSceneAsync(PlaySceneName);
                 gamePhase = PLAY;
-                InitializePlay();
             }
         }
         else if (gamePhase == PLAY)
