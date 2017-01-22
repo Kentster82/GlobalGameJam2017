@@ -7,7 +7,7 @@ public class activate_fun_in_the_sun : MonoBehaviour {
     int Case;
 	// Use this for initialization
 	void Start () {
-        time = 0;
+        time = 5;
         Case = 0;
 	}
 
