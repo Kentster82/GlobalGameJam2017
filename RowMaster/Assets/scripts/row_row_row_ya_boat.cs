@@ -60,7 +60,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
         }
         if(Input.GetKeyDown(RB) && Input.GetKeyDown(LB) || Input.GetKeyDown(RB) && TriggerL || Input.GetKeyDown(LB) && TriggerR || TriggerL && TriggerR)
         {
-            force = 75;
+            force = 120;
         }
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(RB))
         {
@@ -97,7 +97,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
         }
         OldTriggerStateR = NewTriggerStateR;
         OldTriggerStateL = NewTriggerStateL;
-        force = 50;
+        force = 100;
     }
 
     void Update () {
@@ -142,8 +142,8 @@ public class row_row_row_ya_boat : MonoBehaviour {
 					Debug.Log ("They're not flagged, so i'm gonna transfer shit");
 						flagged = true;
 						collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged = false;
-						// Generate wave
-					Debug.Log("I transfered shit");
+                        this.transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
+                    Debug.Log("I transfered shit");
 					}
 				}
 			}

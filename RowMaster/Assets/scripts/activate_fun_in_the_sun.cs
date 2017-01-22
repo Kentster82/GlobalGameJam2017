@@ -17,8 +17,8 @@ public class activate_fun_in_the_sun : MonoBehaviour {
         if (time <= 0)
         {
             Debug.Log("Somethin works");
-            time = Random.Range(1,5);
-            Case = Random.Range(0, 7);
+            time = Random.Range(3,7);
+            Case = Random.Range(0, 9);
             switch (Case)
             {
                 case 0:

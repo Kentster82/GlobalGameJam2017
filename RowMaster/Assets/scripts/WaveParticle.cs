@@ -27,10 +27,6 @@ public class WaveParticle : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
-		TimerTestInt++;
-		if(TimerTestInt > 200){
-			waveGenerator.Emit (150);
-			TimerTestInt = 0;
-		}
+		
 	}
 }
