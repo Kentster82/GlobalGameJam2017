@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class row_row_row_ya_boat : MonoBehaviour {
@@ -11,6 +12,8 @@ public class row_row_row_ya_boat : MonoBehaviour {
 	public bool flagged = false;
 	public int score = 0;
 	float time = 0;
+	public int winThreshold;
+	public string GameEndScene;
 
 	Vector3 direction;
     bool OldTriggerStateR , OldTriggerStateL;
@@ -127,18 +130,21 @@ public class row_row_row_ya_boat : MonoBehaviour {
 		if (wait >= 0)
 			wait--;
 
-		if (flagged)
-		{
+		if (flagged) {
 			time += Time.deltaTime;
 			score = (int)time;
 			if (this.gameObject.name == "Raft1")
-				GameObject.Find("GamePimp").GetComponent<Pimpin>().Raft1Score = score;
+				GameObject.Find ("GamePimp").GetComponent<Pimpin> ().Raft1Score = score;
 			if (this.gameObject.name == "Raft2")
-				GameObject.Find("GamePimp").GetComponent<Pimpin>().Raft2Score = score;
+				GameObject.Find ("GamePimp").GetComponent<Pimpin> ().Raft2Score = score;
 			if (this.gameObject.name == "Raft3")
-				GameObject.Find("GamePimp").GetComponent<Pimpin>().Raft3Score = score;
+				GameObject.Find ("GamePimp").GetComponent<Pimpin> ().Raft3Score = score;
 			if (this.gameObject.name == "Raft4")
-				GameObject.Find("GamePimp").GetComponent<Pimpin>().Raft4Score = score;
+				GameObject.Find ("GamePimp").GetComponent<Pimpin> ().Raft4Score = score;
+			if (score >= winThreshold){
+				flagged = false;
+				SceneManager.LoadSceneAsync(GameEndScene);
+			}
 		}
 	}
 
