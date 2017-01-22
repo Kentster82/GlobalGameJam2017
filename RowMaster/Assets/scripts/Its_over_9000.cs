@@ -58,7 +58,7 @@ public class Its_over_9000 : MonoBehaviour {
                     return;
                 }
             }
-            Debug.Log(anglesum);
+            //Debug.Log(anglesum);
             //setbools(current);
             last = current;
             //Debug.Log(angle);

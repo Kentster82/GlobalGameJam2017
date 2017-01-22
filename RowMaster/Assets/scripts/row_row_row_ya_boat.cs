@@ -125,20 +125,25 @@ public class row_row_row_ya_boat : MonoBehaviour {
 			flagged = true;
 			Destroy(collision.gameObject);
 		}
+		Debug.Log ("I hit something");
 
-		if (collision.gameObject.tag == "player")
+		if (collision.gameObject.tag == "Player")
 		{
 			//if (flagged)
 			//	flagged = false;
+			Debug.Log("I hit a player");
 			if (!flagged)
 			{
 				if (wait <= 0)
 				{
+				Debug.Log("I'm not flagged");
 					if (collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged)
 					{
+					Debug.Log ("They're not flagged, so i'm gonna transfer shit");
 						flagged = true;
 						collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged = false;
 						// Generate wave
+					Debug.Log("I transfered shit");
 					}
 				}
 			}
