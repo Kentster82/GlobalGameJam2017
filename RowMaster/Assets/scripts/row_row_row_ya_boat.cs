@@ -64,7 +64,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
            GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Right").position);
 
         }
-        if (TriggerR)
+        if (TriggerR || Input.GetKeyDown(KeyCode.DownArrow))
         {
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
@@ -81,7 +81,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
             GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Left").position);
 
         }
-        if ( TriggerL)
+        if ( TriggerL || Input.GetKeyDown(KeyCode.S))
         {
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
