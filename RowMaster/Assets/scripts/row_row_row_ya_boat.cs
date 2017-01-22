@@ -67,7 +67,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
         if(Input.GetKeyDown(RB) && Input.GetKeyDown(LB) || Input.GetKeyDown(RB) && TriggerL || Input.GetKeyDown(LB) && TriggerR || TriggerL && TriggerR)
         {
             force = 60;
-            Debug.Log("NICE!");
+            //Debug.Log("NICE!");
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
             GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Right").position);
@@ -78,7 +78,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
 			rightAnimator.SetTrigger ("Forward");
            direction = transform.Find("Front").position - transform.position;
            direction = force *direction.normalized;
-           Debug.Log("RB");
+           //Debug.Log("RB");
            GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Right").position);
 
         }
@@ -97,7 +97,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
 			leftAnimator.SetTrigger ("Forward");
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
-            Debug.Log("LB");
+            //Debug.Log("LB");
             GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Left").position);
 
         }
@@ -130,6 +130,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
 		if (wait >= 0)
 			wait--;
 
+		/*
 		if (flagged) {
 			time += Time.deltaTime;
 			score = (int)time;
@@ -146,6 +147,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
 				SceneManager.LoadSceneAsync(GameEndScene);
 			}
 		}
+		*/
 	}
 
 	void OnCollisionEnter(Collision collision)
@@ -173,7 +175,8 @@ public class row_row_row_ya_boat : MonoBehaviour {
 						flagged = true;
 						collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged = false;
                         this.transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-                        GameObject.Find("Cheers").GetComponent<AudioSource>().UnPause();
+                        GameObject.Find("Cheers").GetComponent<AudioSource>().Play();
+						GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
                         //Debug.Log("I transfered shit");
                     }
 				}
