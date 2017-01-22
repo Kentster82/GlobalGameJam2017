@@ -137,7 +137,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
 					if (collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged)
 					{
 						flagged = true;
-						collision.gameObject.GetComponent<row_row_row_ya_boat> ().flagged = false;
+						collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged = false;
 						// Generate wave
 					}
 				}
