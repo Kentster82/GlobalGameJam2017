@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class row_row_row_ya_boat : MonoBehaviour {
-	
+	public Animator leftAnimator;
+	public Animator rightAnimator;
+
 	public string JoyNum;
     public int force;
 	public bool flagged = false;
@@ -69,6 +71,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(RB))
         {
+			rightAnimator.SetTrigger ("Forward");
            direction = transform.Find("Front").position - transform.position;
            direction = force *direction.normalized;
            //Debug.Log(direction);
@@ -77,6 +80,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
         }
         if (TriggerR || Input.GetKeyDown(KeyCode.DownArrow))
         {
+			rightAnimator.SetTrigger ("Backward");
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
             //Debug.Log(direction);
@@ -86,6 +90,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
     
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(LB))
         {
+			leftAnimator.SetTrigger ("Forward");
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
             //Debug.Log(direction);
@@ -94,6 +99,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
         }
         if ( TriggerL || Input.GetKeyDown(KeyCode.S))
         {
+			leftAnimator.SetTrigger ("Backward");
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
             //Debug.Log(direction);
