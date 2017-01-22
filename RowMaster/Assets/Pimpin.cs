@@ -3,26 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pimpin : MonoBehaviour {
-    public int offset1 = 13;
-    public int offset2 = 72;
 
-    string P1Text = "P1 SCORE";
-    string P2Text = "P2 SCORE";
+	public int Raft1Score;
+	public int Raft2Score;
+	public int Raft3Score;
+	public int Raft4Score;
 
-
-    // Use this for initialization
-    void Start () {
-		
+	// Use this for initialization
+	void Start () {
+		Raft1Score = GameObject.Find ("Raft1").GetComponent<row_row_row_ya_boat>().score;
+		Raft2Score = GameObject.Find ("Raft2").GetComponent<row_row_row_ya_boat>().score;
+		Raft3Score = GameObject.Find ("Raft3").GetComponent<row_row_row_ya_boat>().score;
+		Raft4Score = GameObject.Find ("Raft4").GetComponent<row_row_row_ya_boat>().score;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-
-    void OnGUI()
-    {
-        GUI.Label(new Rect(offset1*Screen.width / 100, 20, Screen.width / 4, 20), P1Text);
-        GUI.Label(new Rect(offset2*Screen.width / 100, 20, Screen.width, 20), P2Text);
-    }
 }
