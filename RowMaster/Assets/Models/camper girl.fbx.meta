@@ -1,0 +1,172 @@
+fileFormatVersion: 2
+guid: 93b12d032af5c4540a845f9d5d9ba2a3
+timeCreated: 1485056759
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: chest.001
+    100004: f_ring.01.L.001
+    100006: f_ring.01.R.001
+    100008: f_ring.02.L.001
+    100010: f_ring.02.L.001_end
+    100012: f_ring.02.R.001
+    100014: f_ring.02.R.001_end
+    100016: foot.L.001
+    100018: foot.R.001
+    100020: forearm.L.001
+    100022: forearm.R.001
+    100024: Girl
+    100026: head.001
+    100028: head.001_end
+    100030: heel.02.L.001
+    100032: heel.02.L.001_end
+    100034: heel.02.R.001
+    100036: heel.02.R.001_end
+    100038: heel.L.001
+    100040: heel.R.001
+    100042: hips.001
+    100044: metarig.001
+    100046: neck.001
+    100048: palm.03.L.001
+    100050: palm.03.R.001
+    100052: shin.L.001
+    100054: shin.R.001
+    100056: shoulder.L.001
+    100058: shoulder.R.001
+    100060: spine.001
+    100062: thigh.L.001
+    100064: thigh.R.001
+    100066: thumb.01.L.001
+    100068: thumb.01.R.001
+    100070: thumb.02.L.001
+    100072: thumb.02.R.001
+    100074: thumb.03.L.001
+    100076: thumb.03.L.001_end
+    100078: thumb.03.R.001
+    100080: thumb.03.R.001_end
+    100082: toe.L.001
+    100084: toe.L.001_end
+    100086: toe.R.001
+    100088: toe.R.001_end
+    100090: upper_arm.L.001
+    100092: upper_arm.R.001
+    400000: //RootNode
+    400002: chest.001
+    400004: f_ring.01.L.001
+    400006: f_ring.01.R.001
+    400008: f_ring.02.L.001
+    400010: f_ring.02.L.001_end
+    400012: f_ring.02.R.001
+    400014: f_ring.02.R.001_end
+    400016: foot.L.001
+    400018: foot.R.001
+    400020: forearm.L.001
+    400022: forearm.R.001
+    400024: Girl
+    400026: head.001
+    400028: head.001_end
+    400030: heel.02.L.001
+    400032: heel.02.L.001_end
+    400034: heel.02.R.001
+    400036: heel.02.R.001_end
+    400038: heel.L.001
+    400040: heel.R.001
+    400042: hips.001
+    400044: metarig.001
+    400046: neck.001
+    400048: palm.03.L.001
+    400050: palm.03.R.001
+    400052: shin.L.001
+    400054: shin.R.001
+    400056: shoulder.L.001
+    400058: shoulder.R.001
+    400060: spine.001
+    400062: thigh.L.001
+    400064: thigh.R.001
+    400066: thumb.01.L.001
+    400068: thumb.01.R.001
+    400070: thumb.02.L.001
+    400072: thumb.02.R.001
+    400074: thumb.03.L.001
+    400076: thumb.03.L.001_end
+    400078: thumb.03.R.001
+    400080: thumb.03.R.001_end
+    400082: toe.L.001
+    400084: toe.L.001_end
+    400086: toe.R.001
+    400088: toe.R.001_end
+    400090: upper_arm.L.001
+    400092: upper_arm.R.001
+    4300000: Girl
+    9500000: //RootNode
+    13700000: Girl
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
