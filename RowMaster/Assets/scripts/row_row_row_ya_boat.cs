@@ -10,6 +10,8 @@ public class row_row_row_ya_boat : MonoBehaviour {
     public string JoyNum;
     KeyCode RB, LB;
     Vector3 Bouyant = new Vector3(0, 9.81f, 0);
+
+	int wait = 0;
     // Use this for initialization
     void Start () {
         OldTriggerStateR =false;
@@ -96,9 +98,14 @@ public class row_row_row_ya_boat : MonoBehaviour {
 
     void Update () {
 		if (flagged)
-			this.gameObject.transform.Find("FlagObject").gameObject.SetActive(true);
+		{
+			this.gameObject.transform.Find ("FlagObject").gameObject.SetActive (true);
+			wait = 20;
+		}
 		if (!flagged)
 			this.gameObject.transform.Find("FlagObject").gameObject.SetActive(false);
+		if (wait >= 0)
+			wait--;
 	}
 
 	void OnCollisionEnter(Collision collision)
@@ -116,14 +123,17 @@ public class row_row_row_ya_boat : MonoBehaviour {
 			Debug.Log(JoyNum + "I hit a player");
 			if (!flagged)
 			{
-				Debug.Log (JoyNum + "I'm not flagged");
-				if (collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged)
+				if (wait <= 0)
 				{
-					Debug.Log (JoyNum + "Time to switch shit");
-					flagged = true;
-					collision.gameObject.GetComponent<row_row_row_ya_boat> ().flagged = false;
-					Debug.Log (JoyNum + "I switched shit");
-					// Generate wave
+					Debug.Log (JoyNum + "I'm not flagged");
+					if (collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged)
+					{
+						Debug.Log (JoyNum + "Time to switch shit");
+						flagged = true;
+						collision.gameObject.GetComponent<row_row_row_ya_boat> ().flagged = false;
+						Debug.Log (JoyNum + "I switched shit");
+						// Generate wave
+					}
 				}
 			}
 		}
