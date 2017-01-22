@@ -111,13 +111,18 @@ public class row_row_row_ya_boat : MonoBehaviour {
 
 		if (collision.gameObject.tag == "player")
 		{
-			if (flagged)
-				flagged = false;
+			//if (flagged)
+			//	flagged = false;
+			Debug.Log(JoyNum + "I hit a player");
 			if (!flagged)
 			{
+				Debug.Log (JoyNum + "I'm not flagged");
 				if (collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged)
 				{
+					Debug.Log (JoyNum + "Time to switch shit");
 					flagged = true;
+					collision.gameObject.GetComponent<row_row_row_ya_boat> ().flagged = false;
+					Debug.Log (JoyNum + "I switched shit");
 					// Generate wave
 				}
 			}
