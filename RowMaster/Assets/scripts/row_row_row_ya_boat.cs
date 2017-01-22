@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class row_row_row_ya_boat : MonoBehaviour {
     Vector3 direction;
-    public int force = 5;
+    public int force;
 	public bool flagged = false;
     bool OldTriggerStateR , OldTriggerStateL;
     public string JoyNum;
@@ -44,11 +44,17 @@ public class row_row_row_ya_boat : MonoBehaviour {
        
         bool NewTriggerStateR = Input.GetAxis(JoyNum + "AxisRight") > 0f;
         bool NewTriggerStateL = Input.GetAxis(JoyNum + "AxisLeft") > 0f;
+        bool TriggerR = (!OldTriggerStateR && NewTriggerStateR);
+        bool TriggerL = (!OldTriggerStateL && NewTriggerStateL);
 
-        if(transform.position.y <= 0)
+        if (transform.position.y <= 0)
         {
             
             GetComponent<Rigidbody>().AddForceAtPosition(Bouyant * -(transform.position.y- GetComponent<Rigidbody>().mass),transform.position);
+        }
+        if(Input.GetKeyDown(RB) && Input.GetKeyDown(LB) || Input.GetKeyDown(RB) && TriggerL || Input.GetKeyDown(LB) && TriggerR || TriggerL && TriggerR)
+        {
+            force = 75;
         }
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(RB))
         {
@@ -58,7 +64,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
            GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Right").position);
 
         }
-        if (!OldTriggerStateR && NewTriggerStateR)
+        if (TriggerR)
         {
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
@@ -75,7 +81,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
             GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Left").position);
 
         }
-        if ( !OldTriggerStateL && NewTriggerStateL)
+        if ( TriggerL)
         {
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
@@ -85,6 +91,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
         }
         OldTriggerStateR = NewTriggerStateR;
         OldTriggerStateL = NewTriggerStateL;
+        force = 50;
     }
 
     void Update () {
