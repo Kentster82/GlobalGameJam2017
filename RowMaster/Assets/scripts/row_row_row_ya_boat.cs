@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class row_row_row_ya_boat : MonoBehaviour {
     Vector3 direction;
-    public int force = 5;
+    public int force;
 	public bool flagged = false;
     bool OldTriggerStateR , OldTriggerStateL;
     public string JoyNum;
     KeyCode RB, LB;
     Vector3 Bouyant = new Vector3(0, 9.81f, 0);
+
+	int wait = 0;
     // Use this for initialization
     void Start () {
         OldTriggerStateR =false;
@@ -44,11 +46,17 @@ public class row_row_row_ya_boat : MonoBehaviour {
        
         bool NewTriggerStateR = Input.GetAxis(JoyNum + "AxisRight") > 0f;
         bool NewTriggerStateL = Input.GetAxis(JoyNum + "AxisLeft") > 0f;
+        bool TriggerR = (!OldTriggerStateR && NewTriggerStateR);
+        bool TriggerL = (!OldTriggerStateL && NewTriggerStateL);
 
-        if(transform.position.y <= 0)
+        if (transform.position.y <= 0)
         {
             
             GetComponent<Rigidbody>().AddForceAtPosition(Bouyant * -(transform.position.y- GetComponent<Rigidbody>().mass),transform.position);
+        }
+        if(Input.GetKeyDown(RB) && Input.GetKeyDown(LB) || Input.GetKeyDown(RB) && TriggerL || Input.GetKeyDown(LB) && TriggerR || TriggerL && TriggerR)
+        {
+            force = 75;
         }
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(RB))
         {
@@ -58,7 +66,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
            GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Right").position);
 
         }
-        if (!OldTriggerStateR && NewTriggerStateR)
+        if (TriggerR || Input.GetKeyDown(KeyCode.DownArrow))
         {
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
@@ -75,7 +83,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
             GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Left").position);
 
         }
-        if ( !OldTriggerStateL && NewTriggerStateL)
+        if ( TriggerL || Input.GetKeyDown(KeyCode.S))
         {
             direction = transform.Find("Front").position - transform.position;
             direction = force * direction.normalized;
@@ -85,10 +93,19 @@ public class row_row_row_ya_boat : MonoBehaviour {
         }
         OldTriggerStateR = NewTriggerStateR;
         OldTriggerStateL = NewTriggerStateL;
+        force = 50;
     }
 
     void Update () {
-      
+		if (flagged)
+		{
+			this.gameObject.transform.Find ("FlagObject").gameObject.SetActive (true);
+			wait = 20;
+		}
+		if (!flagged)
+			this.gameObject.transform.Find("FlagObject").gameObject.SetActive(false);
+		if (wait >= 0)
+			wait--;
 	}
 
 	void OnCollisionEnter(Collision collision)
@@ -101,14 +118,22 @@ public class row_row_row_ya_boat : MonoBehaviour {
 
 		if (collision.gameObject.tag == "player")
 		{
-			if (flagged)
-				flagged = false;
+			//if (flagged)
+			//	flagged = false;
+			Debug.Log(JoyNum + "I hit a player");
 			if (!flagged)
 			{
-				if (collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged)
+				if (wait <= 0)
 				{
-					flagged = true;
-					// Generate wave
+					Debug.Log (JoyNum + "I'm not flagged");
+					if (collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged)
+					{
+						Debug.Log (JoyNum + "Time to switch shit");
+						flagged = true;
+						collision.gameObject.GetComponent<row_row_row_ya_boat> ().flagged = false;
+						Debug.Log (JoyNum + "I switched shit");
+						// Generate wave
+					}
 				}
 			}
 		}
