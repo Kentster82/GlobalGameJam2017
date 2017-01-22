@@ -88,7 +88,10 @@ public class row_row_row_ya_boat : MonoBehaviour {
     }
 
     void Update () {
-      
+		if (flagged)
+			this.gameObject.transform.Find("FlagObject").gameObject.SetActive(true);
+		if (!flagged)
+			this.gameObject.transform.Find("FlagObject").gameObject.SetActive(false);
 	}
 
 	void OnCollisionEnter(Collision collision)
