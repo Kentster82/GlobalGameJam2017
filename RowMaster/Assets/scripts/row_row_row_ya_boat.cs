@@ -21,7 +21,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
     // Use this for initialization
     void Start () {
         OldTriggerStateR =false;
-       // GameObject.Find("Cheers").GetComponent<AudioSource>().Pause();
+        GameObject.Find("Cheers").GetComponent<AudioSource>().Pause();
         switch (JoyNum)
         {
             case "Joystick1":
