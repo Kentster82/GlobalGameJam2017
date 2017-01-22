@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class row_row_row_ya_boat : MonoBehaviour {
-    Vector3 direction;
+	
+	public string JoyNum;
     public int force;
 	public bool flagged = false;
+	public int score = 0;
+	float time = 0;
+
+	Vector3 direction;
     bool OldTriggerStateR , OldTriggerStateL;
-    public string JoyNum;
     KeyCode RB, LB;
     Vector3 Bouyant = new Vector3(0, 9.81f, 0);
 
@@ -106,6 +110,12 @@ public class row_row_row_ya_boat : MonoBehaviour {
 			this.gameObject.transform.Find("FlagObject").gameObject.SetActive(false);
 		if (wait >= 0)
 			wait--;
+
+		if (flagged)
+		{
+			time += Time.deltaTime;
+			score = (int)time;
+		}
 	}
 
 	void OnCollisionEnter(Collision collision)
@@ -120,18 +130,14 @@ public class row_row_row_ya_boat : MonoBehaviour {
 		{
 			//if (flagged)
 			//	flagged = false;
-			Debug.Log(JoyNum + "I hit a player");
 			if (!flagged)
 			{
 				if (wait <= 0)
 				{
-					Debug.Log (JoyNum + "I'm not flagged");
 					if (collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged)
 					{
-						Debug.Log (JoyNum + "Time to switch shit");
 						flagged = true;
 						collision.gameObject.GetComponent<row_row_row_ya_boat> ().flagged = false;
-						Debug.Log (JoyNum + "I switched shit");
 						// Generate wave
 					}
 				}
