@@ -21,6 +21,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
     // Use this for initialization
     void Start () {
         OldTriggerStateR =false;
+        GameObject.Find("Cheers").GetComponent<AudioSource>().Pause();
         switch (JoyNum)
         {
             case "Joystick1":
@@ -162,8 +163,9 @@ public class row_row_row_ya_boat : MonoBehaviour {
 						flagged = true;
 						collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged = false;
                         this.transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-                    //Debug.Log("I transfered shit");
-					}
+                        GameObject.Find("Cheers").GetComponent<AudioSource>().UnPause();
+                        //Debug.Log("I transfered shit");
+                    }
 				}
 			}
 		}
