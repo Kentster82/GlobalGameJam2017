@@ -116,10 +116,14 @@ public class row_row_row_ya_boat : MonoBehaviour {
 		if (flagged)
 		{
 			this.gameObject.transform.Find ("FlagObject").gameObject.SetActive (true);
+			this.gameObject.transform.Find ("flag indicator").gameObject.SetActive (true);
 			wait = 20;
 		}
 		if (!flagged)
-			this.gameObject.transform.Find("FlagObject").gameObject.SetActive(false);
+		{
+			this.gameObject.transform.Find ("FlagObject").gameObject.SetActive (false);
+			this.gameObject.transform.Find ("flag indicator").gameObject.SetActive (false);
+		}
 		if (wait >= 0)
 			wait--;
 
