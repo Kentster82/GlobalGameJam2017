@@ -7,8 +7,6 @@ public class WaveParticle : MonoBehaviour {
 	public ParticleSystem waveGenerator;
 	public List<ParticleCollisionEvent> collisionEvents;
 
-	public int TimerTestInt = 0;
-
 	void Awake () {
 		waveGenerator = GetComponent<ParticleSystem> ();
 		collisionEvents = new List<ParticleCollisionEvent> ();
@@ -24,9 +22,5 @@ public class WaveParticle : MonoBehaviour {
 				boat.AddForce (particleForce);
 			}
 		}
-	}
-
-	void FixedUpdate(){
-		
 	}
 }
