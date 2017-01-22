@@ -16,9 +16,9 @@ public class activate_fun_in_the_sun : MonoBehaviour {
         time -= Time.deltaTime;
         if (time <= 0)
         {
-            Debug.Log("Somethin works");
+            //Debug.Log("Somethin works");
             time = Random.Range(3,7);
-            Case = Random.Range(0, 9);
+            Case = Random.Range(0, 10);
             switch (Case)
             {
                 case 0:
@@ -54,6 +54,9 @@ public class activate_fun_in_the_sun : MonoBehaviour {
                 case 8:
                     GameObject.Find("WaveGenerator2").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
                     GameObject.Find("WaveGenerator4").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
+                    break;
+                case 9:
+                    GameObject.Find("WaveGenerator5").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
                     break;
                 default:
                     break;

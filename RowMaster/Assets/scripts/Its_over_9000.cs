@@ -108,12 +108,12 @@ public class Its_over_9000 : MonoBehaviour {
     //    }
     //}
     void Update () {
-        if (!POWER)
-            this.gameObject.transform.Find("POWER").gameObject.SetActive(false);
-        if (POWER)
-        {
-            //Vector3 front = GetComponent<Rigidbody>().transform.Find("Front").position - transform.position;
-            this.gameObject.transform.Find("POWER").gameObject.SetActive(true);
-        }
+        //if (!POWER)
+        //    this.gameObject.transform.Find("POWER").gameObject.SetActive(false);
+        //if (POWER)
+        //{
+        //    //Vector3 front = GetComponent<Rigidbody>().transform.Find("Front").position - transform.position;
+        //    this.gameObject.transform.Find("POWER").gameObject.SetActive(true);
+        //}
 	}
 }

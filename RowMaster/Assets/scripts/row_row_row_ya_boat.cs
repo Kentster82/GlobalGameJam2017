@@ -60,7 +60,12 @@ public class row_row_row_ya_boat : MonoBehaviour {
         }
         if(Input.GetKeyDown(RB) && Input.GetKeyDown(LB) || Input.GetKeyDown(RB) && TriggerL || Input.GetKeyDown(LB) && TriggerR || TriggerL && TriggerR)
         {
-            force = 120;
+            force = 60;
+            Debug.Log("NICE!");
+            direction = transform.Find("Front").position - transform.position;
+            direction = force * direction.normalized;
+            GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Right").position);
+            GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Left").position);
         }
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(RB))
         {
@@ -97,7 +102,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
         }
         OldTriggerStateR = NewTriggerStateR;
         OldTriggerStateL = NewTriggerStateL;
-        force = 100;
+        force = 75;
     }
 
     void Update () {
@@ -133,25 +138,25 @@ public class row_row_row_ya_boat : MonoBehaviour {
 			flagged = true;
 			Destroy(collision.gameObject);
 		}
-		Debug.Log ("I hit something");
+		//Debug.Log ("I hit something");
 
 		if (collision.gameObject.tag == "Player")
 		{
 			//if (flagged)
 			//	flagged = false;
-			Debug.Log("I hit a player");
+			//Debug.Log("I hit a player");
 			if (!flagged)
 			{
 				if (wait <= 0)
 				{
-				Debug.Log("I'm not flagged");
+				//Debug.Log("I'm not flagged");
 					if (collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged)
 					{
-					Debug.Log ("They're not flagged, so i'm gonna transfer shit");
+					//Debug.Log ("They're not flagged, so i'm gonna transfer shit");
 						flagged = true;
 						collision.gameObject.GetComponent<row_row_row_ya_boat>().flagged = false;
                         this.transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-                    Debug.Log("I transfered shit");
+                    //Debug.Log("I transfered shit");
 					}
 				}
 			}
