@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: 832396e2cedba9e44bd6b89d9c8f3216
+timeCreated: 1485057419
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Boy
+    100002: //RootNode
+    100004: chest
+    100006: f_ring.01.L
+    100008: f_ring.01.R
+    100010: f_ring.02.L
+    100012: f_ring.02.L_end
+    100014: f_ring.02.R
+    100016: f_ring.02.R_end
+    100018: foot.L
+    100020: foot.R
+    100022: forearm.L
+    100024: forearm.R
+    100026: head
+    100028: head_end
+    100030: heel.02.L
+    100032: heel.02.L_end
+    100034: heel.02.R
+    100036: heel.02.R_end
+    100038: heel.L
+    100040: heel.R
+    100042: hips
+    100044: metarig
+    100046: neck
+    100048: palm.03.L
+    100050: palm.03.R
+    100052: shin.L
+    100054: shin.R
+    100056: shoulder.L
+    100058: shoulder.R
+    100060: spine
+    100062: thigh.L
+    100064: thigh.R
+    100066: thumb.01.L
+    100068: thumb.01.R
+    100070: thumb.02.L
+    100072: thumb.02.R
+    100074: thumb.03.L
+    100076: thumb.03.L_end
+    100078: thumb.03.R
+    100080: thumb.03.R_end
+    100082: toe.L
+    100084: toe.L_end
+    100086: toe.R
+    100088: toe.R_end
+    100090: upper_arm.L
+    100092: upper_arm.R
+    400000: Boy
+    400002: //RootNode
+    400004: chest
+    400006: f_ring.01.L
+    400008: f_ring.01.R
+    400010: f_ring.02.L
+    400012: f_ring.02.L_end
+    400014: f_ring.02.R
+    400016: f_ring.02.R_end
+    400018: foot.L
+    400020: foot.R
+    400022: forearm.L
+    400024: forearm.R
+    400026: head
+    400028: head_end
+    400030: heel.02.L
+    400032: heel.02.L_end
+    400034: heel.02.R
+    400036: heel.02.R_end
+    400038: heel.L
+    400040: heel.R
+    400042: hips
+    400044: metarig
+    400046: neck
+    400048: palm.03.L
+    400050: palm.03.R
+    400052: shin.L
+    400054: shin.R
+    400056: shoulder.L
+    400058: shoulder.R
+    400060: spine
+    400062: thigh.L
+    400064: thigh.R
+    400066: thumb.01.L
+    400068: thumb.01.R
+    400070: thumb.02.L
+    400072: thumb.02.R
+    400074: thumb.03.L
+    400076: thumb.03.L_end
+    400078: thumb.03.R
+    400080: thumb.03.R_end
+    400082: toe.L
+    400084: toe.L_end
+    400086: toe.R
+    400088: toe.R_end
+    400090: upper_arm.L
+    400092: upper_arm.R
+    4300000: Boy
+    7400000: metarig|metarigAction
+    7400002: metarig|metarigAction.001
+    9500000: //RootNode
+    13700000: Boy
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
