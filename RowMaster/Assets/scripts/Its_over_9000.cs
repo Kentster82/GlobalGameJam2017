@@ -24,7 +24,7 @@ public class Its_over_9000 : MonoBehaviour {
     private void FixedUpdate()
     {
         
-        if(time == 0)
+        if(time <= 0)
         {
             last = GetComponent<Rigidbody>().transform.Find("Front").position - transform.position;
         }
@@ -65,7 +65,7 @@ public class Its_over_9000 : MonoBehaviour {
             //Debug.Log(angleprev);
             if ( anglesum + (angleprev-(time/2)) >= 360)
             {
-                //GetComponent<Rigidbody>().MovePosition(new Vector3(0, 5, 0));
+                GetComponent<Rigidbody>().MovePosition(new Vector3(0, 5, 0));
                 POWER = true;
                 count = 0;
                 time = 0;
