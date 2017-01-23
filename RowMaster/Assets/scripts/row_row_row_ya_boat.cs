@@ -16,7 +16,16 @@ public class row_row_row_ya_boat : MonoBehaviour {
 	public int winThreshold;
 	public string GameEndScene;
 
-	Vector3 direction;
+    public KeyCode p1forward;
+
+    public KeyCode p1back;
+
+    public KeyCode p2forward;
+
+    public KeyCode p2back;
+
+
+    Vector3 direction;
     bool OldTriggerStateR , OldTriggerStateL;
     KeyCode RB, LB;
     Vector3 Bouyant = new Vector3(0, 9.81f, 0);
@@ -75,7 +84,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
             GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Right").position);
             GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Left").position);
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(RB))
+        if (Input.GetKeyDown(p1forward) || Input.GetKeyDown(RB))
         {
 			rightAnimator.SetTrigger ("Forward");
            direction = transform.Find("Front").position - transform.position;
@@ -84,7 +93,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
            GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Right").position);
 
         }
-        if (TriggerR || Input.GetKeyDown(KeyCode.DownArrow))
+        if (TriggerR || Input.GetKeyDown(p1back))
         {
 			rightAnimator.SetTrigger ("Backward");
             direction = transform.Find("Front").position - transform.position;
@@ -94,7 +103,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
 
         }
     
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(LB))
+        if (Input.GetKeyDown(p2forward) || Input.GetKeyDown(LB))
         {
 			leftAnimator.SetTrigger ("Forward");
             direction = transform.Find("Front").position - transform.position;
@@ -103,7 +112,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
             GetComponent<Rigidbody>().AddForceAtPosition(direction, transform.Find("Left").position);
 
         }
-        if ( TriggerL || Input.GetKeyDown(KeyCode.S))
+        if ( TriggerL || Input.GetKeyDown(p2back))
         {
 			leftAnimator.SetTrigger ("Backward");
             direction = transform.Find("Front").position - transform.position;

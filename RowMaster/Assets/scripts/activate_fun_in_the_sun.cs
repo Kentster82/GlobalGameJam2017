@@ -23,52 +23,52 @@ public class activate_fun_in_the_sun : MonoBehaviour {
             switch (Case)
             {
                 case 0:
-                    GameObject.Find("WaveGenerator1").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
+                    GameObject.Find("WaveGenerator1").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
 					GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
                     break;
                 case 1:
-                    GameObject.Find("WaveGenerator2").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-					GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
+                    GameObject.Find("WaveGenerator2").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
+                    GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
                     break;
                 case 2:
-                    GameObject.Find("WaveGenerator3").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-					GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
+                    GameObject.Find("WaveGenerator3").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
+
                     break;
                 case 3:
-                    GameObject.Find("WaveGenerator4").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-					GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
+                    GameObject.Find("WaveGenerator4").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
+                    GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
                     break;
                 case 4:
-                    GameObject.Find("WaveGenerator1").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-					GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
-                    GameObject.Find("WaveGenerator3").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-					GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
+                    GameObject.Find("WaveGenerator1").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
+                    GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
+                    GameObject.Find("WaveGenerator3").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
+                    GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
                     break;
                 case 5:
-                    GameObject.Find("WaveGenerator2").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
+                    GameObject.Find("WaveGenerator2").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump"); 
 					GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
-                    GameObject.Find("WaveGenerator4").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);  
-					break;
+                    GameObject.Find("WaveGenerator4").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
+                    break;
                 case 6:
-                    GameObject.Find("WaveGenerator1").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-					GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
-                    GameObject.Find("WaveGenerator2").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-                    GameObject.Find("WaveGenerator3").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-                    GameObject.Find("WaveGenerator4").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
+                    GameObject.Find("WaveGenerator1").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
+                    GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
+                    GameObject.Find("WaveGenerator2").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
+                    GameObject.Find("WaveGenerator3").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
+                    GameObject.Find("WaveGenerator4").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
                     break;
                 case 7:
-                    GameObject.Find("WaveGenerator1").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-					GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
-					GameObject.Find("WaveGenerator3").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
+                    GameObject.Find("WaveGenerator1").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
+                    GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
+					GameObject.Find("WaveGenerator3").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
                     break;
                 case 8:
-                    GameObject.Find("WaveGenerator2").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-					GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
-                    GameObject.Find("WaveGenerator4").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
+                    GameObject.Find("WaveGenerator2").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
+                    GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
+                    GameObject.Find("WaveGenerator4").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
                     break;
                 case 9:
-                    GameObject.Find("WaveGenerator5").transform.FindChild("WaveGenerator").GetComponent<ParticleSystem>().Emit(150);
-					GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
+                    GameObject.Find("WaveGenerator5").transform.FindChild("Whale").GetComponent<Animator>().SetTrigger("Jump");
+                    GameObject.Find("SplishSplashTakinABath").GetComponent<AudioSource>().Play();
                     break;
                 default:
                     break;
