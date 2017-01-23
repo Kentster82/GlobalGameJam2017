@@ -75,13 +75,13 @@ public class Pimpin : MonoBehaviour {
         else if (gamePhase == PLAY)
         {
             GUI.skin.label.fontSize = 30;
-            GUI.contentColor = Color.red;
+			GUI.contentColor = Color.red;
             GUI.Label(new Rect(Screen.width / 4 - ScoresX_offset, 10, Screen.width, Screen.height), "P1: " + Raft1Score);
-            GUI.contentColor = Color.yellow;
+			GUI.contentColor = Color.magenta;
             GUI.Label(new Rect(Screen.width / 2 - ScoresX_offset, 10, Screen.width, Screen.height), "P2: " + Raft2Score);
-            GUI.contentColor = Color.green;
-            GUI.Label(new Rect(3*Screen.width / 4 - ScoresX_offset, 10, Screen.width, Screen.height), "P3: " + Raft3Score);
             GUI.contentColor = Color.blue;
+            GUI.Label(new Rect(3*Screen.width / 4 - ScoresX_offset, 10, Screen.width, Screen.height), "P3: " + Raft3Score);
+            GUI.contentColor = Color.green;
             GUI.Label(new Rect(Screen.width - ScoresX_offset, 10, Screen.width, Screen.height), "P4: " + Raft4Score);
         }
         else if (gamePhase == WINNER)
