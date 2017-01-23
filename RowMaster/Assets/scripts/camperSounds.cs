@@ -6,6 +6,6 @@ public class camperSounds : MonoBehaviour {
 
 	void playSplash()
     {
-        Debug.Log("SPLASH");
+        //Debug.Log("SPLASH");
     }
 }
