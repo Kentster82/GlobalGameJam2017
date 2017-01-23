@@ -6,6 +6,7 @@ using UnityEngine;
 public class row_row_row_ya_boat : MonoBehaviour {
 	public Animator leftAnimator;
 	public Animator rightAnimator;
+	public Pimpin P;
 
 	public string JoyNum;
     public int force;
@@ -23,6 +24,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
 	int wait = 0;
     // Use this for initialization
     void Start () {
+		P = GameObject.Find ("GamePimp").GetComponent<Pimpin> ();
         OldTriggerStateR =false;
         //GameObject.Find("Cheers").GetComponent<AudioSource>().Pause();
         switch (JoyNum)
@@ -144,7 +146,25 @@ public class row_row_row_ya_boat : MonoBehaviour {
 				GameObject.Find ("GamePimp").GetComponent<Pimpin> ().Raft4Score = score;
 			if (score >= winThreshold){
 				flagged = false;
-				SceneManager.LoadSceneAsync(GameEndScene);
+				P.gamePhase = 4;
+				int winScore = Mathf.Max (P.Raft1Score, P.Raft2Score, P.Raft3Score, P.Raft4Score);
+				if (P.Raft1Score == winScore) {
+					P.winnerColor = new Color(0.2f, 0.3f, 0.4f);
+				}
+				else if (P.Raft2Score == winScore) {
+					P.winnerColor = new Color (160, 32, 240);
+						
+				}
+				else if (P.Raft3Score == winScore) {
+					P.winnerColor = Color.blue;
+						
+				}
+				else if (P.Raft4Score == winScore) {
+					P.winnerColor = Color.green;
+						
+				}
+
+				//SceneManager.LoadSceneAsync(GameEndScene);
 			}
 		}
 		*/
