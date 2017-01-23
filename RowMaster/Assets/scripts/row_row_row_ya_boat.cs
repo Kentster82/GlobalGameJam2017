@@ -132,7 +132,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
 		if (wait >= 0)
 			wait--;
 
-		/*
+		
 		if (flagged) {
 			time += Time.deltaTime;
 			score = (int)time;
@@ -167,7 +167,7 @@ public class row_row_row_ya_boat : MonoBehaviour {
 				//SceneManager.LoadSceneAsync(GameEndScene);
 			}
 		}
-		*/
+		
 	}
 
 	void OnCollisionEnter(Collision collision)

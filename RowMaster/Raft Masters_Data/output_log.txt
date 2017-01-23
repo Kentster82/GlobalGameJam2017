@@ -1,0 +1,70 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce 940M (ID=0x1347)
+    Vendor:   NVIDIA
+    VRAM:     1989 MB
+    Driver:   10.18.15.4268
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\unode\Desktop\GlobalGameJam2017\RowMaster\Raft Masters_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\unode\Desktop\GlobalGameJam2017\RowMaster\Raft Masters_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\unode\Desktop\GlobalGameJam2017\RowMaster\Raft Masters_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\unode\Desktop\GlobalGameJam2017\RowMaster\Raft Masters_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\unode\Desktop\GlobalGameJam2017\RowMaster\Raft Masters_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\unode\Desktop\GlobalGameJam2017\RowMaster\Raft Masters_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\unode\Desktop\GlobalGameJam2017\RowMaster\Raft Masters_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\unode\Desktop\GlobalGameJam2017\RowMaster\Raft Masters_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\unode\Desktop\GlobalGameJam2017\RowMaster\Raft Masters_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\unode\Desktop\GlobalGameJam2017\RowMaster\Raft Masters_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.057 seconds
+Platform assembly: C:\Users\unode\Desktop\GlobalGameJam2017\RowMaster\Raft Masters_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\unode\Desktop\GlobalGameJam2017\RowMaster\Raft Masters_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.557284 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 4430 -> priority: 1 
+IndexOutOfRangeException: Array index is out of range.
+  at Pimpin.OnGUI () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.843758 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at activate_fun_in_the_sun.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2247.
+Total: 0.522049 ms (FindLiveObjects: 0.120831 ms CreateObjectMapping: 0.034056 ms MarkObjects: 0.349899 ms  DeleteObjects: 0.016328 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at activate_fun_in_the_sun.FixedUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at activate_fun_in_the_sun.FixedUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at activate_fun_in_the_sun.FixedUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at activate_fun_in_the_sun.FixedUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at activate_fun_in_the_sun.FixedUpdate () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
