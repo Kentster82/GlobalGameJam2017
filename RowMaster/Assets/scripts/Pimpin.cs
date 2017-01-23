@@ -16,12 +16,17 @@ public class Pimpin : MonoBehaviour {
     const int WIN = 2;
     const int GAME_SELECT = 3;
     const int WINNER = 4;
+    const int TUTORIAL = 5;
+
+    private bool completedTut = false;
 
     public string MenuSceneName;
     public string PlaySceneName;        //name of game "play" scene
 
     public Font f;
     public Texture logo;
+    public Texture[] tutorialImage;
+    private int imageCount = 0;
     public GUIStyle style;
 
     public Color winnerColor;
@@ -68,9 +73,35 @@ public class Pimpin : MonoBehaviour {
             GUI.contentColor = Color.white;
             if (GUI.Button(new Rect(Screen.width / 2 - Screen.width / 4, Screen.height / 4, Screen.width / 2, Screen.height / 6), "Capture the Flag"))
             {
+                if (!completedTut)
+                    gamePhase = TUTORIAL;
+                else
+                {
+                    SceneManager.LoadSceneAsync(PlaySceneName);
+                    gamePhase = PLAY;
+                }
+            }
+        }
+        else if (gamePhase == TUTORIAL)
+        {
+            if (imageCount > 6)
+            {
                 SceneManager.LoadSceneAsync(PlaySceneName);
                 gamePhase = PLAY;
             }
+            GUI.Box(new Rect(0, 0, Screen.width, Screen.height), tutorialImage[imageCount]);
+            if (Input.anyKey)
+            {
+                if (imageCount < 7)
+                    imageCount++;
+                else
+                {
+                    SceneManager.LoadSceneAsync(PlaySceneName);
+                    gamePhase = PLAY;
+                }
+                  
+            }
+            
         }
         else if (gamePhase == PLAY)
         {
